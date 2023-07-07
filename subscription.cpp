@@ -66,13 +66,14 @@ int main() {
     // Display the output combinations
     std::cout << "Possible combinations within the budget:" << std::endl;
     for (const auto& combination : combinations) {
+        std::cout << "{";
         for (int i = 0; i < combination.size(); i++) {
-            std::cout << combination[i];
+            std::cout << "“" << combination[i] << "”";
             if (i != combination.size() - 1) {
-                std::cout << " ";
+                std::cout << ", ";
             }
         }
-        std::cout << std::endl;
+        std::cout << "}" << std::endl;
     }
 
     return 0;
